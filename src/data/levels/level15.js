@@ -1,0 +1,67 @@
+import { probabilityProfiles as profiles } from "./profiles.js";
+import { point } from "./helpers.js";
+
+export default {
+  id: 15,
+  slug: "sealed-watch",
+  name: "Level 15: Sealed Watch",
+  width: 12,
+  height: 9,
+  tutorialText:
+    "A knight now loops across the last two rows. The key shard sits in that patrol path, while a lava column splits the chamber from rows 2 to 7.",
+  start: { x: 1, y: 1 },
+  goal: { x: 10, y: 1 },
+  layout: [
+    "############",
+    "#S....L...G#",
+    "#.....L....#",
+    "#.....L....#",
+    "#.....L....#",
+    "#.....L....#",
+    "#.....L....#",
+    "#.....K....#",
+    "############",
+  ],
+  probabilityProfiles: {
+    A: profiles.precision,
+    B: profiles.steady,
+    C: profiles.leftDrift,
+    D: profiles.rightDrift,
+    E: profiles.hesitant,
+  },
+  probabilityLayout: [
+    "############",
+    "#AABBBCDDDA#",
+    "#BBBCCCDDDA#",
+    "#BBCCCDDDEA#",
+    "#CCCDDDEEAA#",
+    "#BCDDEEECCA#",
+    "#CCEEEDDDAA#",
+    "#BBBCCCDDAA#",
+    "############",
+  ],
+  enemies: [
+    {
+      id: "knight-15",
+      start: { x: 10, y: 6 },
+      patrolPath: [
+        point(10, 6),
+        point(10, 7),
+        point(9, 7),
+        point(8, 7),
+        point(7, 7),
+        point(6, 7),
+        point(5, 7),
+        point(4, 7),
+        point(3, 7),
+        point(2, 7),
+        point(1, 7),
+        point(1, 6),
+        point(2, 6),
+        point(3, 6),
+        point(4, 6),
+        point(5, 6),
+      ],
+    },
+  ],
+};

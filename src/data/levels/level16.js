@@ -1,0 +1,78 @@
+import { probabilityProfiles as profiles } from "./profiles.js";
+import { point } from "./helpers.js";
+
+export default {
+  id: 16,
+  slug: "sealed-mastery",
+  name: "Level 16: Sealed Mastery",
+  width: 12,
+  height: 10,
+  tutorialText:
+    "Final test: key shard, hazards, open sight lines, and two knights. Route to the shard first, then reopen a safe path to the goal.",
+  start: { x: 1, y: 1 },
+  goal: { x: 10, y: 1 },
+  layout: [
+    "############",
+    "#S..#....#G#",
+    "#..T#..#...#",
+    "#.....##...#",
+    "#.##..K..#.#",
+    "#....L....T#",
+    "#..#....#..#",
+    "#....##....#",
+    "#..........#",
+    "############",
+  ],
+  probabilityProfiles: {
+    A: profiles.precision,
+    B: profiles.steady,
+    C: profiles.leftDrift,
+    D: profiles.rightDrift,
+    E: profiles.hesitant,
+    F: profiles.chaos,
+  },
+  probabilityLayout: [
+    "############",
+    "#AAB#CCDD#A#",
+    "#BBE#CC#DAA#",
+    "#CCCDD##EEA#",
+    "#A##DDEED#A#",
+    "#BCDDEEECCA#",
+    "#BB#CCDD#AA#",
+    "#CCEE##DDDA#",
+    "#FFFEEEEDDA#",
+    "############",
+  ],
+  enemies: [
+    {
+      id: "knight-16a",
+      start: { x: 3, y: 8 },
+      patrolPath: [
+        point(1, 8),
+        point(2, 8),
+        point(3, 8),
+        point(4, 8),
+        point(4, 7),
+        point(3, 7),
+        point(2, 7),
+        point(1, 7),
+      ],
+    },
+    {
+      id: "knight-16b",
+      start: { x: 10, y: 8 },
+      patrolPath: [
+        point(10, 6),
+        point(10, 7),
+        point(10, 8),
+        point(9, 8),
+        point(8, 8),
+        point(7, 8),
+        point(7, 7),
+        point(8, 7),
+        point(9, 7),
+        point(9, 6),
+      ],
+    },
+  ],
+};

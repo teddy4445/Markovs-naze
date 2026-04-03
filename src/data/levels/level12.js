@@ -1,0 +1,77 @@
+import { probabilityProfiles as profiles } from "./profiles.js";
+import { point } from "./helpers.js";
+
+export default {
+  id: 12,
+  slug: "crossfire-halls",
+  name: "Level 12: Crossfire Halls",
+  width: 12,
+  height: 9,
+  tutorialText:
+    "Both knights cover different halves of the room. Use the open center only when you know which chase lane you are exposing.",
+  start: { x: 1, y: 1 },
+  goal: { x: 9, y: 7 },
+  layout: [
+    "############",
+    "#S....#..T.#",
+    "#..T..#....#",
+    "#..........#",
+    "#.##....##.#",
+    "#....T.....#",
+    "#..#....#..#",
+    "#.....T..G.#",
+    "############",
+  ],
+  probabilityProfiles: {
+    A: profiles.precision,
+    B: profiles.steady,
+    C: profiles.leftDrift,
+    D: profiles.rightDrift,
+    E: profiles.hesitant,
+  },
+  probabilityLayout: [
+    "############",
+    "#AABBC#DDEA#",
+    "#BBECC#DDDA#",
+    "#CCCDDDEEAA#",
+    "#A##CDDD##A#",
+    "#BCDDEEECCA#",
+    "#BB#CCDD#AA#",
+    "#CCCEEEDDAA#",
+    "############",
+  ],
+  enemies: [
+    {
+      id: "knight-12a",
+      start: { x: 4, y: 3 },
+      patrolPath: [
+        point(1, 1),
+        point(2, 1),
+        point(3, 1),
+        point(4, 1),
+        point(4, 2),
+        point(4, 3),
+        point(3, 3),
+        point(2, 3),
+        point(1, 3),
+        point(1, 2),
+      ],
+    },
+    {
+      id: "knight-12b",
+      start: { x: 10, y: 7 },
+      patrolPath: [
+        point(10, 7),
+        point(10, 6),
+        point(10, 5),
+        point(9, 5),
+        point(8, 5),
+        point(7, 5),
+        point(7, 6),
+        point(7, 7),
+        point(8, 7),
+        point(9, 7),
+      ],
+    },
+  ],
+};

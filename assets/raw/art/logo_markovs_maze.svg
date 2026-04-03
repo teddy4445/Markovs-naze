@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="512" viewBox="0 0 1024 512">
+<!-- Local placeholder source generated for Markov's Maze -->
+<ellipse cx="512" cy="256" rx="332" ry="186" fill="none" stroke="rgba(224, 190, 92, 1.000)" stroke-width="8" />
+<ellipse cx="512" cy="256" rx="292" ry="146" fill="none" stroke="rgba(138, 227, 213, 1.000)" stroke-width="4" />
+<text x="512" y="240" fill="rgba(223, 212, 179, 1.000)" font-size="92" font-family="Georgia, serif" text-anchor="middle">Markov&apos;s Maze</text>
+</svg>
