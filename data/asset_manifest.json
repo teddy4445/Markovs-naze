@@ -46,7 +46,17 @@
         "raw_svg": "assets/raw/art/logo_markovs_maze.svg"
       },
       "prompt_subject": "stylized Markov's Maze logo with a rune-ring motif and elegant stone fantasy lettering",
-      "consistency_notes": "Keep gold and teal rune accents aligned with the rest of the UI; the logo is the only art asset allowed to contain text."
+      "consistency_notes": "Keep gold and teal rune accents aligned with the rest of the UI; the logo is the only art asset allowed to contain text.",
+      "backup_path": "assets/backups/original_visuals/branding/logo_markovs_maze.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:13:22+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "bg_main_menu_1920x1080",
@@ -75,7 +85,17 @@
         "raw_svg": null
       },
       "prompt_subject": "wide ruins courtyard seen from a puzzle-friendly top-down orthographic angle, broken columns, glowing runes, broad negative space for menu UI",
-      "consistency_notes": "Use warm torchlight and teal rune light to establish the fantasy ruins mood without adding gameplay objects."
+      "consistency_notes": "Use warm torchlight and teal rune light to establish the fantasy ruins mood without adding gameplay objects.",
+      "backup_path": "assets/backups/original_visuals/backgrounds/bg_main_menu_1920x1080.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:13:27+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "bg_level_select_1920x1080",
@@ -104,7 +124,17 @@
         "raw_svg": null
       },
       "prompt_subject": "ruined stone map hall with inset maze slabs, corridor fragments, and subtle glowing rune pathways",
-      "consistency_notes": "Keep the center and lower thirds calm so level nodes can sit on top without readability loss."
+      "consistency_notes": "Keep the center and lower thirds calm so level nodes can sit on top without readability loss.",
+      "backup_path": "assets/backups/original_visuals/backgrounds/bg_level_select_1920x1080.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:13:33+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "bg_gameplay_maze_1920x1080",
@@ -133,7 +163,17 @@
         "raw_svg": null
       },
       "prompt_subject": "subdued ancient ruins floor plane with low-contrast stone geometry, faint rune circles, and soft edge vignette",
-      "consistency_notes": "Prioritize quiet values so the maze tiles, sprites, and overlays remain dominant."
+      "consistency_notes": "Prioritize quiet values so the maze tiles, sprites, and overlays remain dominant.",
+      "backup_path": "assets/backups/original_visuals/backgrounds/bg_gameplay_maze_1920x1080.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:13:38+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "bg_long_ruins_parallax",
@@ -162,7 +202,17 @@
         "raw_svg": null
       },
       "prompt_subject": "long horizontal ruined skyline with arches, pillars, banners, and layered rune-lit stone silhouettes",
-      "consistency_notes": "Designed as a horizontal strip for later parallax reuse; keep silhouettes rhythmic and loop-friendly."
+      "consistency_notes": "Designed as a horizontal strip for later parallax reuse; keep silhouettes rhythmic and loop-friendly.",
+      "backup_path": "assets/backups/original_visuals/backgrounds/bg_long_ruins_parallax.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:13:43+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "bg_long_ruins_parallax_alt",
@@ -191,7 +241,17 @@
         "raw_svg": null
       },
       "prompt_subject": "alternate long horizontal ruined skyline with collapsed towers, moonlit masonry, and cooler rune glows",
-      "consistency_notes": "Use the same silhouette language as the primary strip but shift the lighting and ruin density."
+      "consistency_notes": "Use the same silhouette language as the primary strip but shift the lighting and ruin density.",
+      "backup_path": "assets/backups/original_visuals/backgrounds/bg_long_ruins_parallax_alt.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:13:49+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_floor_a",
@@ -220,7 +280,17 @@
         "raw_svg": "assets/raw/art/tile_floor_a.svg"
       },
       "prompt_subject": "single stone floor tile with broad slabs and a faint circular rune seam",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_floor_a.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T11:56:50+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_floor_b",
@@ -249,7 +319,17 @@
         "raw_svg": "assets/raw/art/tile_floor_b.svg"
       },
       "prompt_subject": "single stone floor tile with offset slab seams and minimal moss detail",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_floor_b.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:02+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_floor_c",
@@ -278,7 +358,17 @@
         "raw_svg": "assets/raw/art/tile_floor_c.svg"
       },
       "prompt_subject": "single stone floor tile with an angled crack and tiny rune chips",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_floor_c.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:08+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_wall_a",
@@ -307,7 +397,17 @@
         "raw_svg": "assets/raw/art/tile_wall_a.svg"
       },
       "prompt_subject": "single heavy stone wall tile viewed from top-down, dark capstones and rune-cut edges",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_wall_a.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:14+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_wall_b",
@@ -336,7 +436,17 @@
         "raw_svg": "assets/raw/art/tile_wall_b.svg"
       },
       "prompt_subject": "single stone wall tile with more broken corners and a moss-darkened top edge",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_wall_b.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:19+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_wall_corner",
@@ -365,7 +475,17 @@
         "raw_svg": "assets/raw/art/tile_wall_corner.svg"
       },
       "prompt_subject": "single corner wall tile with clear L-shaped mass and rune-carved corner brace",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_wall_corner.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:25+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_start",
@@ -394,7 +514,17 @@
         "raw_svg": "assets/raw/art/tile_start.svg"
       },
       "prompt_subject": "single start tile with a teal rune ring and welcoming compass mark on ancient stone",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_start.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:30+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_goal",
@@ -423,7 +553,17 @@
         "raw_svg": "assets/raw/art/tile_goal.svg"
       },
       "prompt_subject": "single goal tile with a radiant gold rune seal and layered concentric stones",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_goal.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:35+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_trap",
@@ -452,7 +592,17 @@
         "raw_svg": "assets/raw/art/tile_trap.svg"
       },
       "prompt_subject": "single trap tile with a crimson rune hazard symbol and sharp stone spikes hinted inside the rune circle",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_trap.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:40+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "tile_lava",
@@ -481,7 +631,17 @@
         "raw_svg": "assets/raw/art/tile_lava.svg"
       },
       "prompt_subject": "single lava tile with a contained molten rune pool inside broken stone borders",
-      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity."
+      "consistency_notes": "All maze tiles should stay readable at gameplay zoom, with clean edge contrast and rune detailing kept secondary to pathing clarity.",
+      "backup_path": "assets/backups/original_visuals/tiles/tile_lava.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:45+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_patrol_path",
@@ -510,7 +670,17 @@
         "raw_svg": "assets/raw/art/overlay_patrol_path.svg"
       },
       "prompt_subject": "transparent path overlay with a thin glowing patrol line across a tile",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_patrol_path.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:51+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_patrol_node",
@@ -539,7 +709,17 @@
         "raw_svg": "assets/raw/art/overlay_patrol_node.svg"
       },
       "prompt_subject": "transparent patrol node overlay with a compact glowing circular marker",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_patrol_node.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:14:56+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_compass_base",
@@ -568,7 +748,17 @@
         "raw_svg": "assets/raw/art/overlay_compass_base.svg"
       },
       "prompt_subject": "transparent compass-circle overlay with subtle rune ticks and no highlighted direction",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_compass_base.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:01+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_compass_intended_strong",
@@ -597,7 +787,17 @@
         "raw_svg": "assets/raw/art/overlay_compass_intended_strong.svg"
       },
       "prompt_subject": "transparent compass-circle overlay with the forward arrow strongly highlighted in teal",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_compass_intended_strong.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:07+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_compass_opposite_strong",
@@ -626,7 +826,17 @@
         "raw_svg": "assets/raw/art/overlay_compass_opposite_strong.svg"
       },
       "prompt_subject": "transparent compass-circle overlay with the reverse arrow strongly highlighted in crimson",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_compass_opposite_strong.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:12+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_compass_left_strong",
@@ -655,7 +865,17 @@
         "raw_svg": "assets/raw/art/overlay_compass_left_strong.svg"
       },
       "prompt_subject": "transparent compass-circle overlay with the left arrow strongly highlighted in gold",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_compass_left_strong.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:17+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_compass_right_strong",
@@ -684,7 +904,17 @@
         "raw_svg": "assets/raw/art/overlay_compass_right_strong.svg"
       },
       "prompt_subject": "transparent compass-circle overlay with the right arrow strongly highlighted in gold",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_compass_right_strong.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:22+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_compass_stay_strong",
@@ -713,7 +943,17 @@
         "raw_svg": "assets/raw/art/overlay_compass_stay_strong.svg"
       },
       "prompt_subject": "transparent compass-circle overlay with the center stay rune strongly highlighted in violet",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_compass_stay_strong.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:27+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "overlay_compass_active_tile",
@@ -742,7 +982,17 @@
         "raw_svg": "assets/raw/art/overlay_compass_active_tile.svg"
       },
       "prompt_subject": "transparent active-tile highlight with a glowing rune ring hugging the tile edges",
-      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling."
+      "consistency_notes": "Probability and path overlays should read instantly above tiles, using high contrast, transparent backgrounds, and restrained rune styling.",
+      "backup_path": "assets/backups/original_visuals/overlays/overlay_compass_active_tile.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:32+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "prop_broken_column",
@@ -771,7 +1021,17 @@
         "raw_svg": "assets/raw/art/prop_broken_column.svg"
       },
       "prompt_subject": "collapsed stone column segment with cracked rune bands",
-      "consistency_notes": "Props should feel like maze dressing, not blockers, and should stay compact enough to read against the floor."
+      "consistency_notes": "Props should feel like maze dressing, not blockers, and should stay compact enough to read against the floor.",
+      "backup_path": "assets/backups/original_visuals/props/prop_broken_column.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:38+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "prop_rune_shard",
@@ -800,7 +1060,17 @@
         "raw_svg": "assets/raw/art/prop_rune_shard.svg"
       },
       "prompt_subject": "floating or fallen rune shard crystal carved from pale stone",
-      "consistency_notes": "Props should feel like maze dressing, not blockers, and should stay compact enough to read against the floor."
+      "consistency_notes": "Props should feel like maze dressing, not blockers, and should stay compact enough to read against the floor.",
+      "backup_path": "assets/backups/original_visuals/props/prop_rune_shard.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:43+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "prop_moss_edge",
@@ -829,7 +1099,17 @@
         "raw_svg": "assets/raw/art/prop_moss_edge.svg"
       },
       "prompt_subject": "soft moss fringe that can sit along a stone edge without blocking readability",
-      "consistency_notes": "Props should feel like maze dressing, not blockers, and should stay compact enough to read against the floor."
+      "consistency_notes": "Props should feel like maze dressing, not blockers, and should stay compact enough to read against the floor.",
+      "backup_path": "assets/backups/original_visuals/props/prop_moss_edge.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:48+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "prop_stone_rubble",
@@ -858,7 +1138,17 @@
         "raw_svg": "assets/raw/art/prop_stone_rubble.svg"
       },
       "prompt_subject": "small pile of broken ruin stones and dust",
-      "consistency_notes": "Props should feel like maze dressing, not blockers, and should stay compact enough to read against the floor."
+      "consistency_notes": "Props should feel like maze dressing, not blockers, and should stay compact enough to read against the floor.",
+      "backup_path": "assets/backups/original_visuals/props/prop_stone_rubble.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:53+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "player_ruins_scholar_idle_base",
@@ -887,7 +1177,17 @@
         "raw_svg": "assets/raw/art/player_ruins_scholar_idle_base.svg"
       },
       "prompt_subject": "ruins scholar seen from top-down, calm idle stance, parchment robe, teal sash, satchel",
-      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose."
+      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose.",
+      "backup_path": "assets/backups/original_visuals/sprites/player/player_ruins_scholar_idle_base.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:15:59+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "player_idle_spritesheet",
@@ -916,7 +1216,17 @@
         "raw_svg": null
       },
       "prompt_subject": "2-frame top-down ruins scholar idle animation with subtle breathing and cloth shift",
-      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose."
+      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose.",
+      "backup_path": "assets/backups/original_visuals/sprites/player/player_idle_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:04+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "player_walk_up_spritesheet",
@@ -945,7 +1255,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down ruins scholar walk cycle facing up, measured and readable",
-      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose."
+      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose.",
+      "backup_path": "assets/backups/original_visuals/sprites/player/player_walk_up_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:09+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "player_walk_down_spritesheet",
@@ -974,7 +1294,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down ruins scholar walk cycle facing down, readable feet and sash motion",
-      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose."
+      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose.",
+      "backup_path": "assets/backups/original_visuals/sprites/player/player_walk_down_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:14+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "player_walk_left_spritesheet",
@@ -1003,7 +1333,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down ruins scholar walk cycle facing left with a compact profile",
-      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose."
+      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose.",
+      "backup_path": "assets/backups/original_visuals/sprites/player/player_walk_left_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:20+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "player_walk_right_spritesheet",
@@ -1032,7 +1372,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down ruins scholar walk cycle facing right with a compact profile",
-      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose."
+      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose.",
+      "backup_path": "assets/backups/original_visuals/sprites/player/player_walk_right_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:26+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "player_death_spritesheet",
@@ -1061,7 +1411,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down ruins scholar defeat animation collapsing into a faint rune burst",
-      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose."
+      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose.",
+      "backup_path": "assets/backups/original_visuals/sprites/player/player_death_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:31+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "player_victory_spritesheet",
@@ -1090,7 +1450,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down ruins scholar victory animation with lifted compass hand and warm rune glow",
-      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose."
+      "consistency_notes": "Keep the ruins scholar silhouette consistent across all player assets: parchment robe, teal sash, dark hair, bronze satchel, and readable top-down pose.",
+      "backup_path": "assets/backups/original_visuals/sprites/player/player_victory_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:37+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "enemy_cursed_knight_idle_base",
@@ -1119,7 +1489,17 @@
         "raw_svg": "assets/raw/art/enemy_cursed_knight_idle_base.svg"
       },
       "prompt_subject": "cursed knight seen from top-down, dark plate armor, glowing visor slit, rune cracks in the armor",
-      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player."
+      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player.",
+      "backup_path": "assets/backups/original_visuals/sprites/enemy/enemy_cursed_knight_idle_base.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:43+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "enemy_idle_spritesheet",
@@ -1148,7 +1528,17 @@
         "raw_svg": null
       },
       "prompt_subject": "2-frame top-down cursed knight idle animation with faint armor pulse",
-      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player."
+      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player.",
+      "backup_path": "assets/backups/original_visuals/sprites/enemy/enemy_idle_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:50+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "enemy_walk_up_spritesheet",
@@ -1177,7 +1567,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down cursed knight walk cycle facing up, deliberate armored movement",
-      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player."
+      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player.",
+      "backup_path": "assets/backups/original_visuals/sprites/enemy/enemy_walk_up_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:16:55+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "enemy_walk_down_spritesheet",
@@ -1206,7 +1606,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down cursed knight walk cycle facing down, heavy armor silhouette",
-      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player."
+      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player.",
+      "backup_path": "assets/backups/original_visuals/sprites/enemy/enemy_walk_down_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:00+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "enemy_walk_left_spritesheet",
@@ -1235,7 +1645,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down cursed knight walk cycle facing left, shield-like shoulder mass",
-      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player."
+      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player.",
+      "backup_path": "assets/backups/original_visuals/sprites/enemy/enemy_walk_left_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:06+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "enemy_walk_right_spritesheet",
@@ -1264,7 +1684,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down cursed knight walk cycle facing right, shield-like shoulder mass",
-      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player."
+      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player.",
+      "backup_path": "assets/backups/original_visuals/sprites/enemy/enemy_walk_right_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:13+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "enemy_alert_spritesheet",
@@ -1293,7 +1723,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down cursed knight alert animation with a bright curse flare and rigid posture",
-      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player."
+      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player.",
+      "backup_path": "assets/backups/original_visuals/sprites/enemy/enemy_alert_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:19+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "enemy_chase_spritesheet",
@@ -1322,7 +1762,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down cursed knight chase animation with faster stride and brighter curse glow",
-      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player."
+      "consistency_notes": "Keep the cursed knight silhouette broad and readable: dark armor, pale curse glow, red-violet accents, and heavier weight than the player.",
+      "backup_path": "assets/backups/original_visuals/sprites/enemy/enemy_chase_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:24+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "vfx_move_puff_spritesheet",
@@ -1351,7 +1801,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down dust and rune spark puff for a successful move",
-      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information."
+      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information.",
+      "backup_path": "assets/backups/original_visuals/vfx/vfx_move_puff_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:29+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "vfx_blocked_bump_spritesheet",
@@ -1380,7 +1840,17 @@
         "raw_svg": null
       },
       "prompt_subject": "3-frame top-down bump star and stone chip effect for colliding with a wall",
-      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information."
+      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information.",
+      "backup_path": "assets/backups/original_visuals/vfx/vfx_blocked_bump_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:34+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "vfx_no_move_pulse_spritesheet",
@@ -1409,7 +1879,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down center pulse effect for a probabilistic stay-in-place result",
-      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information."
+      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information.",
+      "backup_path": "assets/backups/original_visuals/vfx/vfx_no_move_pulse_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:40+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "vfx_trap_trigger_spritesheet",
@@ -1438,7 +1918,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down trap rune snap effect with crimson shards",
-      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information."
+      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information.",
+      "backup_path": "assets/backups/original_visuals/vfx/vfx_trap_trigger_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:45+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "vfx_lava_burst_spritesheet",
@@ -1467,7 +1957,17 @@
         "raw_svg": null
       },
       "prompt_subject": "5-frame top-down lava burst effect with molten splash and ember sparks",
-      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information."
+      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information.",
+      "backup_path": "assets/backups/original_visuals/vfx/vfx_lava_burst_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:50+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "vfx_goal_activate_spritesheet",
@@ -1496,7 +1996,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down goal activation rune bloom with gold and teal light",
-      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information."
+      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information.",
+      "backup_path": "assets/backups/original_visuals/vfx/vfx_goal_activate_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:17:55+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "vfx_enemy_alert_icon",
@@ -1525,7 +2035,17 @@
         "raw_svg": "assets/raw/art/vfx_enemy_alert_icon.svg"
       },
       "prompt_subject": "transparent alert icon with an eye-like rune and sharp gold flare",
-      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information."
+      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information.",
+      "backup_path": "assets/backups/original_visuals/vfx/vfx_enemy_alert_icon.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:00+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "vfx_tile_rune_pulse_spritesheet",
@@ -1554,7 +2074,17 @@
         "raw_svg": null
       },
       "prompt_subject": "4-frame top-down rune pulse effect that can sit above a special tile",
-      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information."
+      "consistency_notes": "Effects should stay crisp and legible over the maze without hiding core tile information.",
+      "backup_path": "assets/backups/original_visuals/vfx/vfx_tile_rune_pulse_spritesheet.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:05+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_menu_primary_idle",
@@ -1583,7 +2113,17 @@
         "raw_svg": "assets/raw/art/btn_menu_primary_idle.svg"
       },
       "prompt_subject": "transparent carved stone button, primary idle state, teal rune inlay, broad center panel",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_menu_primary_idle.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:10+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_menu_primary_hover",
@@ -1612,7 +2152,17 @@
         "raw_svg": "assets/raw/art/btn_menu_primary_hover.svg"
       },
       "prompt_subject": "transparent carved stone button, primary hover state, brighter teal and gold edge glow",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_menu_primary_hover.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:15+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_menu_primary_pressed",
@@ -1641,7 +2191,17 @@
         "raw_svg": "assets/raw/art/btn_menu_primary_pressed.svg"
       },
       "prompt_subject": "transparent carved stone button, primary pressed state, inset center panel and compact glow",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_menu_primary_pressed.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:20+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_menu_secondary_idle",
@@ -1670,7 +2230,17 @@
         "raw_svg": "assets/raw/art/btn_menu_secondary_idle.svg"
       },
       "prompt_subject": "transparent carved stone button, secondary idle state, restrained silver-rune detailing",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_menu_secondary_idle.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:25+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_menu_secondary_hover",
@@ -1699,7 +2269,17 @@
         "raw_svg": "assets/raw/art/btn_menu_secondary_hover.svg"
       },
       "prompt_subject": "transparent carved stone button, secondary hover state, brighter silver and teal edge highlights",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_menu_secondary_hover.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:30+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_level_locked",
@@ -1728,7 +2308,17 @@
         "raw_svg": "assets/raw/art/btn_level_locked.svg"
       },
       "prompt_subject": "transparent square level button with a dark lock rune on carved stone",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_level_locked.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:35+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_level_unlocked",
@@ -1757,7 +2347,17 @@
         "raw_svg": "assets/raw/art/btn_level_unlocked.svg"
       },
       "prompt_subject": "transparent square level button with a glowing open rune gate on carved stone",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_level_unlocked.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:41+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_level_completed",
@@ -1786,7 +2386,17 @@
         "raw_svg": "assets/raw/art/btn_level_completed.svg"
       },
       "prompt_subject": "transparent square level button with a completed gold rune seal on carved stone",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_level_completed.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:46+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "marker_level_locked",
@@ -1815,7 +2425,17 @@
         "raw_svg": "assets/raw/art/marker_level_locked.svg"
       },
       "prompt_subject": "transparent small lock marker icon matching level button styling",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/marker_level_locked.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:53+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "marker_level_complete",
@@ -1844,7 +2464,17 @@
         "raw_svg": "assets/raw/art/marker_level_complete.svg"
       },
       "prompt_subject": "transparent small completion marker icon with a rune check seal",
-      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code."
+      "consistency_notes": "Buttons should feel carved and magical, with clear state differences and enough empty center space for later text rendering in code.",
+      "backup_path": "assets/backups/original_visuals/ui/marker_level_complete.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:18:59+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_ui_restart",
@@ -1873,7 +2503,17 @@
         "raw_svg": "assets/raw/art/btn_ui_restart.svg"
       },
       "prompt_subject": "transparent square UI button with a restart rune arrow engraved in stone",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_ui_restart.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:04+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_ui_pause",
@@ -1902,7 +2542,17 @@
         "raw_svg": "assets/raw/art/btn_ui_pause.svg"
       },
       "prompt_subject": "transparent square UI button with a pause rune carved into stone",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_ui_pause.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:09+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_ui_menu",
@@ -1931,7 +2581,17 @@
         "raw_svg": "assets/raw/art/btn_ui_menu.svg"
       },
       "prompt_subject": "transparent square UI button with a doorway rune icon carved into stone",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_ui_menu.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:15+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_ui_sound_on",
@@ -1960,7 +2620,17 @@
         "raw_svg": "assets/raw/art/btn_ui_sound_on.svg"
       },
       "prompt_subject": "transparent square UI button with a speaker rune and active teal waves",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_ui_sound_on.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:20+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_ui_sound_off",
@@ -1989,7 +2659,17 @@
         "raw_svg": "assets/raw/art/btn_ui_sound_off.svg"
       },
       "prompt_subject": "transparent square UI button with a speaker rune crossed out by a crimson slash",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_ui_sound_off.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:25+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_ui_music_on",
@@ -2018,7 +2698,17 @@
         "raw_svg": "assets/raw/art/btn_ui_music_on.svg"
       },
       "prompt_subject": "transparent square UI button with a note-like rune and active glow",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_ui_music_on.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:30+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_ui_music_off",
@@ -2047,7 +2737,17 @@
         "raw_svg": "assets/raw/art/btn_ui_music_off.svg"
       },
       "prompt_subject": "transparent square UI button with a note-like rune crossed out by a crimson slash",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_ui_music_off.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:36+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "btn_ui_info",
@@ -2076,7 +2776,17 @@
         "raw_svg": "assets/raw/art/btn_ui_info.svg"
       },
       "prompt_subject": "transparent square UI button with a rune sigil that implies help or legend information",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/btn_ui_info.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:41+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "panel_probability_hud",
@@ -2105,7 +2815,17 @@
         "raw_svg": "assets/raw/art/panel_probability_hud.svg"
       },
       "prompt_subject": "transparent HUD panel with carved stone frame, circular rune slots, and a clear center strip for probability info",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/panel_probability_hud.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:46+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "panel_pause_menu",
@@ -2134,7 +2854,17 @@
         "raw_svg": "assets/raw/art/panel_pause_menu.svg"
       },
       "prompt_subject": "transparent large pause menu panel with elegant rune corners and calm stone interior",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/panel_pause_menu.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:51+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "panel_victory",
@@ -2163,7 +2893,17 @@
         "raw_svg": "assets/raw/art/panel_victory.svg"
       },
       "prompt_subject": "transparent large victory panel with celebratory gold rune arcs and a clean content area",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/panel_victory.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:19:56+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "panel_defeat",
@@ -2192,7 +2932,17 @@
         "raw_svg": "assets/raw/art/panel_defeat.svg"
       },
       "prompt_subject": "transparent large defeat panel with darker stone tones and a restrained crimson rune fracture motif",
-      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges."
+      "consistency_notes": "In-game UI elements should share the same stone-and-rune language as the menu, with crisp icon centers and transparent edges.",
+      "backup_path": "assets/backups/original_visuals/ui/panel_defeat.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:20:01+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "icon_goal",
@@ -2221,7 +2971,17 @@
         "raw_svg": "assets/raw/art/icon_goal.svg"
       },
       "prompt_subject": "transparent rune goal icon combining a gate shape and radiant ring",
-      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text."
+      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text.",
+      "backup_path": "assets/backups/original_visuals/icons/icon_goal.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:20:06+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "icon_enemy_alert",
@@ -2250,7 +3010,17 @@
         "raw_svg": "assets/raw/art/icon_enemy_alert.svg"
       },
       "prompt_subject": "transparent enemy alert icon with an eye rune and pointed flare",
-      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text."
+      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text.",
+      "backup_path": "assets/backups/original_visuals/icons/icon_enemy_alert.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:20:11+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "icon_trap",
@@ -2279,7 +3049,17 @@
         "raw_svg": "assets/raw/art/icon_trap.svg"
       },
       "prompt_subject": "transparent trap icon with a crimson spike rune inside a circle",
-      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text."
+      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text.",
+      "backup_path": "assets/backups/original_visuals/icons/icon_trap.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:20:16+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "icon_lava",
@@ -2308,7 +3088,17 @@
         "raw_svg": "assets/raw/art/icon_lava.svg"
       },
       "prompt_subject": "transparent lava icon with a molten droplet rune and ember sparks",
-      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text."
+      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text.",
+      "backup_path": "assets/backups/original_visuals/icons/icon_lava.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:20:21+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     },
     {
       "asset_id": "icon_probability",
@@ -2337,7 +3127,17 @@
         "raw_svg": "assets/raw/art/icon_probability.svg"
       },
       "prompt_subject": "transparent probability icon with a compass circle and weighted rune wedges",
-      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text."
+      "consistency_notes": "Icons should match the same rune language as the overlays and remain readable at 64x64 with no text.",
+      "backup_path": "assets/backups/original_visuals/icons/icon_probability.png",
+      "upgraded_path": null,
+      "review_candidate_path": null,
+      "model_used": null,
+      "generated_at": "2026-04-03T10:20:26+00:00",
+      "manual_review_needed": false,
+      "upgrade_status": "blocked_account_limit",
+      "upgrade_mode": "edit_reference",
+      "upgrade_post_processing": false,
+      "upgrade_note": "OpenAI image generation is blocked by the current account billing or quota limit, so the original asset was preserved."
     }
   ],
   "summary": {
@@ -2356,5 +3156,20 @@
       "J. In-game UI",
       "K. Icons"
     ]
+  },
+  "visual_upgrade": {
+    "last_run_at": "2026-04-04T06:27:35+00:00",
+    "last_run_mode": "safe_or_live",
+    "dry_run": false,
+    "preferred_model_order": [
+      "gpt-image-1.5",
+      "gpt-image-1",
+      "gpt-image-1-mini",
+      "dall-e-2"
+    ],
+    "report_path": "docs/visual_upgrade_report.md",
+    "style_guide_path": "docs/visual_style_guide.md",
+    "backup_root": "assets/backups/original_visuals",
+    "review_root": "assets/review_candidates"
   }
 }
