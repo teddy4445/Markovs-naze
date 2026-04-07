@@ -10,6 +10,12 @@ function coverImage(image, width, height) {
   image.setScale(scale);
 }
 
+function applySubtleBlur(image) {
+  if (image?.postFX?.addBlur) {
+    image.postFX.addBlur(1, 1, 1, 0.65, 0xffffff, 2);
+  }
+}
+
 export class LevelSelectScene extends Phaser.Scene {
   constructor() {
     super("LevelSelectScene");
@@ -23,7 +29,8 @@ export class LevelSelectScene extends Phaser.Scene {
       .text(GAME_WIDTH / 2, 60, "Level Select", {
         fontFamily: FONT_FAMILY,
         fontSize: "38px",
-        color: COLORS.panelText,
+        fontStyle: "bold",
+        color: COLORS.ink,
       })
       .setOrigin(0.5);
 
@@ -46,8 +53,9 @@ export class LevelSelectScene extends Phaser.Scene {
     this.add
       .text(GAME_WIDTH / 2, 96, "Complete a level to unlock the next chamber of the ruins.", {
         fontFamily: FONT_FAMILY,
-        fontSize: "16px",
-        color: COLORS.muted,
+        fontSize: "17px",
+        fontStyle: "bold",
+        color: COLORS.ink,
       })
       .setOrigin(0.5);
 
@@ -59,6 +67,7 @@ export class LevelSelectScene extends Phaser.Scene {
       const background = this.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, "bg_level_select_1920x1080");
       coverImage(background, GAME_WIDTH, GAME_HEIGHT);
       background.setAlpha(0.92);
+      applySubtleBlur(background);
     } else {
       this.cameras.main.setBackgroundColor(0x141319);
     }
@@ -67,9 +76,10 @@ export class LevelSelectScene extends Phaser.Scene {
   renderButtons() {
     const state = SaveManager.getState();
     const columns = 6;
-    const originX = 110;
-    const originY = 170;
     const stepX = 176;
+    const totalWidth = stepX * (columns - 1);
+    const originX = Math.round(GAME_WIDTH / 2 - totalWidth / 2 + 20);
+    const originY = 208;
     const stepY = 150;
 
     levels.forEach((level, index) => {
@@ -89,7 +99,11 @@ export class LevelSelectScene extends Phaser.Scene {
         y,
         textureKey,
         label: `${level.id}`,
-        textStyle: { fontSize: "20px" },
+        textStyle: {
+          fontSize: "20px",
+          fontStyle: "bold",
+          color: COLORS.ink,
+        },
         fallbackWidth: 72,
         fallbackHeight: 72,
         scale: 0.46,
@@ -106,10 +120,11 @@ export class LevelSelectScene extends Phaser.Scene {
       this.add
         .text(x, y + 50, level.name.replace(/^Level \d+: /, ""), {
           fontFamily: FONT_FAMILY,
-          fontSize: "12px",
-          color: unlocked ? COLORS.panelText : COLORS.muted,
+          fontSize: "15px",
+          fontStyle: "bold",
+          color: unlocked ? COLORS.ink : "#4a4137",
           align: "center",
-          wordWrap: { width: 126 },
+          wordWrap: { width: 136 },
         })
         .setOrigin(0.5, 0);
 

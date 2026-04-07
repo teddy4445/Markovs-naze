@@ -12,6 +12,12 @@ function coverImage(image, width, height) {
   image.setScale(scale);
 }
 
+function applySubtleBlur(image) {
+  if (image?.postFX?.addBlur) {
+    image.postFX.addBlur(1, 1, 1, 0.65, 0xffffff, 2);
+  }
+}
+
 export class MenuScene extends Phaser.Scene {
   constructor() {
     super("MenuScene");
@@ -63,6 +69,7 @@ export class MenuScene extends Phaser.Scene {
       const background = this.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, "bg_main_menu_1920x1080");
       coverImage(background, GAME_WIDTH, GAME_HEIGHT);
       background.setAlpha(0.94);
+      applySubtleBlur(background);
       this.tweens.add({
         targets: background,
         scaleX: background.scaleX * 1.02,
@@ -91,10 +98,6 @@ export class MenuScene extends Phaser.Scene {
   }
 
   renderMenu() {
-    const recommendedLevel = SaveManager.getRecommendedLevelId();
-    const state = SaveManager.getState();
-    const completedCount = state.completedLevelIds.length;
-
     if (this.textures.exists("logo_markovs_maze")) {
       const logo = this.add.image(GAME_WIDTH / 2, 136, "logo_markovs_maze");
       logo.setScale(0.56);
@@ -108,25 +111,9 @@ export class MenuScene extends Phaser.Scene {
         .setOrigin(0.5);
     }
 
-    this.add
-      .text(GAME_WIDTH / 2, 226, "Ancient ruins. Uncertain paths.", {
-        fontFamily: FONT_FAMILY,
-        fontSize: "24px",
-        color: COLORS.muted,
-      })
-      .setOrigin(0.5);
-
-    this.add
-      .text(GAME_WIDTH / 2, 270, `Recommended start: Level ${recommendedLevel}`, {
-        fontFamily: FONT_FAMILY,
-        fontSize: "20px",
-        color: COLORS.accentWarm,
-      })
-      .setOrigin(0.5);
-
     new ImageButton(this, {
       x: GAME_WIDTH / 2,
-      y: 366,
+      y: 330,
       textureKey: "btn_menu_primary_idle",
       hoverTextureKey: "btn_menu_primary_hover",
       pressedTextureKey: "btn_menu_primary_pressed",
@@ -139,7 +126,7 @@ export class MenuScene extends Phaser.Scene {
 
     new ImageButton(this, {
       x: GAME_WIDTH / 2,
-      y: 452,
+      y: 416,
       textureKey: "btn_menu_secondary_idle",
       hoverTextureKey: "btn_menu_secondary_hover",
       pressedTextureKey: "btn_menu_secondary_hover",
@@ -152,7 +139,7 @@ export class MenuScene extends Phaser.Scene {
 
     new ImageButton(this, {
       x: GAME_WIDTH / 2,
-      y: 538,
+      y: 502,
       textureKey: "btn_menu_secondary_idle",
       hoverTextureKey: "btn_menu_secondary_hover",
       pressedTextureKey: "btn_menu_secondary_hover",
@@ -164,13 +151,13 @@ export class MenuScene extends Phaser.Scene {
     });
 
     this.progressText = this.add
-      .text(GAME_WIDTH / 2, 620, `${completedCount} of ${levels.length} levels completed`, {
+      .text(GAME_WIDTH / 2, 612, "", {
         fontFamily: FONT_FAMILY,
         fontSize: "18px",
         color: COLORS.panelText,
       })
-      .setOrigin(0.5);
-
+      .setOrigin(0.5)
+      .setAlpha(0);
   }
 
   registerUnlockShortcut() {
@@ -182,6 +169,7 @@ export class MenuScene extends Phaser.Scene {
       SaveManager.unlockAllLevels();
       this.progressText.setText(`All ${levels.length} levels unlocked.`);
       this.progressText.setColor(COLORS.accentWarm);
+      this.progressText.setAlpha(1);
       AudioController.playSfx(this, "ui_click", { volume: 0.55 });
     };
 

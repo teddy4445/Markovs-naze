@@ -1,14 +1,18 @@
 import { COLORS, FONT_FAMILY, GAME_HEIGHT, GAME_WIDTH } from "../game/constants.js";
 import { ImageButton } from "./ImageButton.js";
 
-function createPanel(scene, x, y, textureKey, width, height, alpha = 0.92) {
-  if (scene.textures.exists(textureKey)) {
+function createPanel(scene, x, y, width, height, alpha = 0.97) {
+  return scene.add
+    .rectangle(x, y, width, height, COLORS.panelLightTextured, alpha)
+    .setStrokeStyle(2, COLORS.panelLightStroke, 0.72);
+}
+
+function createOverlayPanel(scene, x, y, width, height, textureKey = null, alpha = 0.985) {
+  if (textureKey && scene.textures.exists(textureKey)) {
     return scene.add.image(x, y, textureKey).setDisplaySize(width, height).setAlpha(alpha);
   }
 
-  return scene.add
-    .rectangle(x, y, width, height, 0x211f27, alpha)
-    .setStrokeStyle(2, 0x8ae3d5, 0.6);
+  return createPanel(scene, x, y, width, height, alpha);
 }
 
 function createLegendIcon(scene, textureKey, x, y) {
@@ -26,7 +30,6 @@ export class HUD {
     this.root = scene.add.container(0, 0).setDepth(50);
     this.overlayRoot = scene.add.container(0, 0).setDepth(80);
     this.overlayButtons = [];
-    this.buttonBackplates = [];
     this.statusOverride = false;
     this.inspectMessage = null;
     this.lastMoveMessage = "Hover a tile to inspect its movement odds.";
@@ -45,27 +48,19 @@ export class HUD {
 
   createControlButtons() {
     const entries = [
-      { key: "btn_ui_pause", handler: () => this.config.onPause?.(), name: "pause" },
       { key: "btn_ui_restart", handler: () => this.config.onRestart?.(), name: "restart" },
       { key: "btn_ui_menu", handler: () => this.config.onMenu?.(), name: "menu" },
       { key: "btn_ui_sound_on", handler: () => this.config.onToggleSound?.(), name: "sound" },
       { key: "btn_ui_music_on", handler: () => this.config.onToggleMusic?.(), name: "music" },
     ];
 
-    const x = GAME_WIDTH - 50;
-    const startY = GAME_HEIGHT - 274;
-    const spacing = 56;
+    const x = 44;
+    const startY = 56;
+    const spacing = 54;
 
     this.iconButtons = {};
     entries.forEach((entry, index) => {
       const y = startY + index * spacing;
-      const backplate = this.scene.add
-        .circle(x, y, 30, 0x120f18, 0.66)
-        .setDepth(54)
-        .setStrokeStyle(2, 0x8ae3d5, 0.2);
-      this.root.add(backplate);
-      this.buttonBackplates.push(backplate);
-
       const control = new ImageButton(this.scene, {
         x,
         y,
@@ -82,74 +77,85 @@ export class HUD {
   }
 
   createProbabilityStrip(boardRect) {
-    const stripWidth = Math.min(Math.max(boardRect.width * 0.72, 420), 560);
+    const stripWidth = Math.min(Math.max(boardRect.width * 0.92, 520), 700);
     const stripX = GAME_WIDTH / 2;
-    const stripY = Math.max(24, boardRect.y - 24);
+    const stripY = Math.max(58, boardRect.y - 36);
+    const stripHeight = 84;
 
     this.stripBackground = this.scene.add
-      .rectangle(stripX, stripY, stripWidth, 50, 0x120f18, 0.8)
-      .setStrokeStyle(2, 0x8ae3d5, 0.26);
+      .rectangle(stripX, stripY, stripWidth, stripHeight, 0x120f18, 0.84)
+      .setStrokeStyle(2, 0x8ae3d5, 0.28);
     this.root.add(this.stripBackground);
 
     const items = [
-      { textureKey: "overlay_compass_intended_strong" },
-      { textureKey: "overlay_compass_opposite_strong" },
-      { textureKey: "overlay_compass_left_strong" },
-      { textureKey: "overlay_compass_right_strong" },
-      { textureKey: "overlay_compass_stay_strong" },
+      { textureKey: "overlay_compass_intended_strong", label: "Intended" },
+      { textureKey: "overlay_compass_opposite_strong", label: "Opposite" },
+      { textureKey: "overlay_compass_left_strong", label: "Left" },
+      { textureKey: "overlay_compass_right_strong", label: "Right" },
+      { textureKey: "overlay_compass_stay_strong", label: "Stay" },
     ];
 
-    const startX = stripX - stripWidth / 2 + 42;
-    const spacing = (stripWidth - 84) / 4;
+    const startX = stripX - stripWidth / 2 + 52;
+    const spacing = (stripWidth - 104) / 4;
     this.probabilityItems = items.map((item, index) => {
       const itemX = startX + index * spacing;
-      const icon = createLegendIcon(this.scene, item.textureKey, itemX, stripY - 8);
+      const label = this.scene.add
+        .text(itemX, stripY - 24, item.label, {
+          fontFamily: FONT_FAMILY,
+          fontSize: "11px",
+          fontStyle: "bold",
+          color: "#ffffff",
+        })
+        .setOrigin(0.5);
+      const icon = createLegendIcon(this.scene, item.textureKey, itemX, stripY - 1);
       const value = this.scene.add
-        .text(itemX, stripY + 12, "--", {
+        .text(itemX, stripY + 24, "--", {
           fontFamily: FONT_FAMILY,
           fontSize: "14px",
+          fontStyle: "bold",
           color: COLORS.panelText,
         })
         .setOrigin(0.5);
-      this.root.add([icon, value]);
+      this.root.add([label, icon, value]);
       return { value };
     });
   }
 
   createInfoPanel(boardRect) {
-    const panelWidth = Math.min(Math.max(boardRect.width + 120, 620), GAME_WIDTH - 130);
+    const panelWidth = Math.min(Math.max(boardRect.width + 150, 620), GAME_WIDTH - 180);
     const panelX = GAME_WIDTH / 2;
-    const panelY = Math.min(GAME_HEIGHT - 26, boardRect.y + boardRect.height + 30);
+    const panelY = Math.min(GAME_HEIGHT - 44, boardRect.y + boardRect.height + 42);
 
-    this.infoPanel = this.scene.add
-      .rectangle(panelX, panelY, panelWidth, 56, 0x120f18, 0.88)
-      .setStrokeStyle(2, 0x8ae3d5, 0.32);
+    this.infoPanel = createPanel(this.scene, panelX, panelY, panelWidth, 78, 0.97);
     this.root.add(this.infoPanel);
 
     this.levelText = this.scene.add
-      .text(panelX - panelWidth / 2 + 18, panelY - 12, "", {
+      .text(panelX - panelWidth / 2 + 20, panelY - 16, "", {
         fontFamily: FONT_FAMILY,
         fontSize: "16px",
-        color: COLORS.panelText,
+        fontStyle: "bold",
+        color: COLORS.ink,
       })
       .setOrigin(0, 0.5);
 
     this.objectiveText = this.scene.add
-      .text(panelX + panelWidth / 2 - 18, panelY - 12, "", {
+      .text(panelX + panelWidth / 2 - 20, panelY - 16, "", {
         fontFamily: FONT_FAMILY,
         fontSize: "14px",
-        color: COLORS.accentWarm,
+        fontStyle: "bold",
+        color: COLORS.ink,
         align: "right",
       })
       .setOrigin(1, 0.5);
 
     this.statusText = this.scene.add
-      .text(panelX, panelY + 12, "", {
+      .text(panelX, panelY + 16, "", {
         fontFamily: FONT_FAMILY,
-        fontSize: "13px",
-        color: COLORS.accent,
+        fontSize: "14px",
+        fontStyle: "bold",
+        color: COLORS.ink,
         align: "center",
-        wordWrap: { width: panelWidth - 40 },
+        wordWrap: { width: panelWidth - 48 },
       })
       .setOrigin(0.5, 0.5);
 
@@ -160,25 +166,28 @@ export class HUD {
     this.overlayShade = this.scene.add
       .rectangle(GAME_WIDTH / 2, GAME_HEIGHT / 2, GAME_WIDTH, GAME_HEIGHT, 0x050608, 0.68)
       .setVisible(false);
-    this.overlayPanel = createPanel(this.scene, GAME_WIDTH / 2, GAME_HEIGHT / 2, "panel_pause_menu", 560, 420);
-    this.overlayPanel.setVisible(false);
+    this.overlayPanel = createOverlayPanel(this.scene, GAME_WIDTH / 2, GAME_HEIGHT / 2, 560, 320, null, 0.98).setVisible(false);
 
     this.overlayTitle = this.scene.add
-      .text(GAME_WIDTH / 2, GAME_HEIGHT / 2 - 142, "", {
+      .text(GAME_WIDTH / 2, GAME_HEIGHT / 2 - 110, "", {
         fontFamily: FONT_FAMILY,
         fontSize: "36px",
-        color: COLORS.panelText,
+        fontStyle: "bold",
+        color: COLORS.ink,
       })
-      .setOrigin(0.5);
+      .setOrigin(0.5)
+      .setVisible(false);
     this.overlayBody = this.scene.add
-      .text(GAME_WIDTH / 2, GAME_HEIGHT / 2 - 52, "", {
+      .text(GAME_WIDTH / 2, GAME_HEIGHT / 2 - 34, "", {
         fontFamily: FONT_FAMILY,
-        fontSize: "20px",
+        fontSize: "18px",
+        fontStyle: "bold",
         align: "center",
         wordWrap: { width: 420 },
-        color: COLORS.muted,
+        color: COLORS.ink,
       })
-      .setOrigin(0.5);
+      .setOrigin(0.5)
+      .setVisible(false);
 
     this.overlayRoot.add([this.overlayShade, this.overlayPanel, this.overlayTitle, this.overlayBody]);
     this.isOverlayVisible = false;
@@ -238,10 +247,10 @@ export class HUD {
   refreshInfoText() {
     this.levelText.setText(this.state.levelName);
     this.objectiveText.setText(this.state.objective);
-    this.statusText.setColor(this.statusColor ?? COLORS.accent).setText(this.state.status);
+    this.statusText.setColor(this.statusColor ?? COLORS.ink).setText(this.state.status);
   }
 
-  flashStatus(message, color = COLORS.accent, duration = 2200) {
+  flashStatus(message, color = COLORS.ink, duration = 2200) {
     this.statusOverride = true;
     this.statusColor = color;
     this.state.status = message;
@@ -251,7 +260,7 @@ export class HUD {
     }
     this.statusTimer = this.scene.time.delayedCall(duration, () => {
       this.statusOverride = false;
-      this.statusColor = COLORS.accent;
+      this.statusColor = COLORS.ink;
       this.state.status = this.inspectMessage ?? this.lastMoveMessage;
       this.refreshInfoText();
       this.statusTimer = null;
@@ -280,26 +289,33 @@ export class HUD {
     this.overlayButtons = [];
   }
 
-  showOverlay({ title, body = "", panelTexture = "panel_pause_menu", buttons = [] }) {
+  showOverlay({ title, body = "", panelTexture = null, buttons = [] }) {
     this.hideOverlay();
     this.isOverlayVisible = true;
     this.overlayShade.setVisible(true);
     this.overlayPanel.destroy();
 
     const hasBody = Boolean(body.trim());
-    const panelHeight = hasBody ? Math.max(360, 248 + buttons.length * 86) : Math.max(300, 188 + buttons.length * 86);
-    this.overlayPanel = createPanel(this.scene, GAME_WIDTH / 2, GAME_HEIGHT / 2, panelTexture, 560, panelHeight).setDepth(81);
-    this.overlayTitle.setText(title).setVisible(true);
-    this.overlayBody.setText(body).setVisible(hasBody);
-    this.overlayBody.setY(GAME_HEIGHT / 2 - 52);
+    const panelHeight = hasBody ? Math.max(340, 236 + buttons.length * 80) : Math.max(280, 156 + buttons.length * 80);
+    this.overlayPanel = createOverlayPanel(
+      this.scene,
+      GAME_WIDTH / 2,
+      GAME_HEIGHT / 2,
+      560,
+      panelHeight,
+      panelTexture,
+      0.985,
+    ).setDepth(81);
     this.overlayShade.setDepth(80);
+    this.overlayTitle.setText(title).setY(GAME_HEIGHT / 2 - (hasBody ? 118 : 108)).setVisible(true);
+    this.overlayBody.setText(body).setY(GAME_HEIGHT / 2 - 30).setVisible(hasBody);
     this.overlayRoot.add(this.overlayPanel);
 
-    const buttonsStartY = hasBody ? GAME_HEIGHT / 2 + 58 : GAME_HEIGHT / 2 - 4;
+    const buttonsStartY = hasBody ? GAME_HEIGHT / 2 + 18 : GAME_HEIGHT / 2 - 44;
     buttons.forEach((button, index) => {
       const instance = new ImageButton(this.scene, {
         x: GAME_WIDTH / 2,
-        y: buttonsStartY + index * 82,
+        y: buttonsStartY + index * 78,
         textureKey: button.variant === "secondary" ? "btn_menu_secondary_idle" : "btn_menu_primary_idle",
         hoverTextureKey: button.variant === "secondary" ? "btn_menu_secondary_hover" : "btn_menu_primary_hover",
         pressedTextureKey: button.variant === "secondary" ? "btn_menu_secondary_hover" : "btn_menu_primary_pressed",
@@ -308,6 +324,10 @@ export class HUD {
         fallbackWidth: 220,
         fallbackHeight: 68,
         depth: 82,
+        textStyle: {
+          color: COLORS.ink,
+          fontStyle: "bold",
+        },
       });
       this.overlayButtons.push(instance);
     });

@@ -11,6 +11,9 @@ export const COLORS = {
   accentWarm: "#e0be5c",
   danger: "#d86a58",
   muted: "#c8bba3",
+  ink: "#17120d",
+  panelLightTextured: 0xe9dfcb,
+  panelLightStroke: 0x5b4f41,
 };
 
 export const DIRECTION_ORDER = ["up", "right", "down", "left"];

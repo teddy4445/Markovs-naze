@@ -1,4 +1,5 @@
 import { levels } from "../data/levels/index.js";
+import { applyFloorProbabilitySwaps } from "../data/levels/helpers.js";
 
 function clone(data) {
   return JSON.parse(JSON.stringify(data));
@@ -58,7 +59,7 @@ function parseCell(tileChar, probabilityKey, probabilityProfiles) {
 }
 
 function buildParsedLevel(level) {
-  const normalized = validateLevel(clone(level));
+  const normalized = validateLevel(applyFloorProbabilitySwaps(clone(level)));
   const grid = normalized.layout.map((row, y) =>
     row.split("").map((tileChar, x) =>
       parseCell(tileChar, normalized.probabilityLayout[y][x], normalized.probabilityProfiles),

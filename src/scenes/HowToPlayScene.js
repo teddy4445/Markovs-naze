@@ -8,14 +8,10 @@ function coverImage(image, width, height) {
   image.setScale(scale);
 }
 
-function createPanel(scene, x, y, textureKey, width, height) {
-  if (scene.textures.exists(textureKey)) {
-    return scene.add.image(x, y, textureKey).setDisplaySize(width, height);
-  }
-
+function createPanel(scene, x, y, width, height) {
   return scene.add
-    .rectangle(x, y, width, height, 0x120f18, 0.88)
-    .setStrokeStyle(2, 0x8ae3d5, 0.4);
+    .rectangle(x, y, width, height, COLORS.panelLightTextured, 0.95)
+    .setStrokeStyle(2, COLORS.panelLightStroke, 0.72);
 }
 
 export class HowToPlayScene extends Phaser.Scene {
@@ -49,19 +45,11 @@ export class HowToPlayScene extends Phaser.Scene {
   }
 
   renderContent() {
-    createPanel(this, GAME_WIDTH / 2, GAME_HEIGHT / 2 + 12, "panel_pause_menu", 1080, 610).setAlpha(0.98);
-
-    this.add
-      .text(GAME_WIDTH / 2, 78, "How To Play", {
-        fontFamily: FONT_FAMILY,
-        fontSize: "38px",
-        color: COLORS.panelText,
-      })
-      .setOrigin(0.5);
+    createPanel(this, GAME_WIDTH / 2, GAME_HEIGHT / 2 + 8, 1116, 600).setAlpha(0.98);
 
     new ImageButton(this, {
-      x: 120,
-      y: 72,
+      x: GAME_WIDTH / 2,
+      y: 56,
       textureKey: "btn_menu_secondary_idle",
       hoverTextureKey: "btn_menu_secondary_hover",
       pressedTextureKey: "btn_menu_secondary_hover",
@@ -84,22 +72,27 @@ export class HowToPlayScene extends Phaser.Scene {
       "Hover the mouse over maze tiles to inspect their exact probabilities.",
     ];
 
+    let currentInstructionY = 116;
     instructions.forEach((line, index) => {
-      this.add
-        .text(122, 146 + index * 42, `- ${line}`, {
+      const text = this.add
+        .text(112, currentInstructionY, `- ${line}`, {
           fontFamily: FONT_FAMILY,
           fontSize: "18px",
-          color: index === 6 ? COLORS.accentWarm : COLORS.panelText,
-          wordWrap: { width: 520 },
+          fontStyle: "bold",
+          color: COLORS.ink,
+          wordWrap: { width: 470 },
+          lineSpacing: 6,
         })
         .setOrigin(0, 0);
+      currentInstructionY += text.height + 20;
     });
 
     this.add
-      .text(855, 142, "Tile Types", {
+      .text(956, 126, "Tile Types", {
         fontFamily: FONT_FAMILY,
         fontSize: "28px",
-        color: COLORS.panelText,
+        fontStyle: "bold",
+        color: COLORS.ink,
       })
       .setOrigin(0.5);
 
@@ -115,8 +108,8 @@ export class HowToPlayScene extends Phaser.Scene {
     ];
 
     samples.forEach((sample, index) => {
-      const x = 820 + (index % 2) * 170;
-      const y = 230 + Math.floor(index / 2) * 92;
+      const x = 894 + (index % 2) * 188;
+      const y = 214 + Math.floor(index / 2) * 92;
 
       if (this.textures.exists(sample.textureKey)) {
         this.add.image(x - 46, y, sample.textureKey).setDisplaySize(54, 54);
@@ -128,18 +121,20 @@ export class HowToPlayScene extends Phaser.Scene {
         .text(x, y, sample.label, {
           fontFamily: FONT_FAMILY,
           fontSize: "18px",
-          color: COLORS.panelText,
+          fontStyle: "bold",
+          color: COLORS.ink,
         })
         .setOrigin(0, 0.5);
     });
 
     this.add
-      .text(855, 605, "Top compass icons always show Intended / Opposite / Left / Right / Stay for the inspected tile.", {
+      .text(956, 610, "Top compass icons always show Intended / Opposite / Left / Right / Stay for the inspected tile.", {
         fontFamily: FONT_FAMILY,
         fontSize: "16px",
-        color: COLORS.accent,
+        fontStyle: "bold",
+        color: COLORS.ink,
         align: "center",
-        wordWrap: { width: 360 },
+        wordWrap: { width: 320 },
       })
       .setOrigin(0.5, 0.5);
   }

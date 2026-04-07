@@ -30,7 +30,6 @@ export class GameScene extends Phaser.Scene {
     this.hoveredTile = null;
     this.isBusy = false;
     this.isFinished = false;
-    this.isPaused = false;
     this.lastResolution = null;
     this.overlayKind = null;
     this.enemyHum = null;
@@ -60,11 +59,11 @@ export class GameScene extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
       this.stopEnemyHum();
       this.ambientMoteEvent?.remove(false);
-      this.runePulseEvent?.remove(false);
       this.tileSparkEvent?.remove(false);
       this.hud?.destroy();
       this.enemies?.forEach((enemy) => enemy.destroy());
       this.specialTileTweens?.forEach((tween) => tween.remove());
+      this.probabilityOverlayObjects?.forEach((overlay) => overlay.destroy());
       this.keyPickups?.forEach((pickup) => {
         pickup.tween?.remove();
         pickup.sprite?.destroy();
@@ -86,44 +85,8 @@ export class GameScene extends Phaser.Scene {
       const background = this.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, "bg_gameplay_maze_1920x1080");
       coverImage(background, GAME_WIDTH, GAME_HEIGHT);
       background.setAlpha(0.95);
-      this.tweens.add({
-        targets: background,
-        x: GAME_WIDTH / 2 + 12,
-        scaleX: background.scaleX * 1.02,
-        scaleY: background.scaleY * 1.02,
-        duration: 18000,
-        yoyo: true,
-        repeat: -1,
-        ease: "Sine.InOut",
-      });
     } else {
       this.cameras.main.setBackgroundColor(0x141319);
-    }
-
-    if (this.textures.exists("bg_long_ruins_parallax")) {
-      const upperStrip = this.add.image(GAME_WIDTH / 2, 92, "bg_long_ruins_parallax");
-      upperStrip.setDisplaySize(GAME_WIDTH + 60, 168).setAlpha(0.2);
-      this.tweens.add({
-        targets: upperStrip,
-        x: GAME_WIDTH / 2 + 24,
-        duration: 14000,
-        yoyo: true,
-        repeat: -1,
-        ease: "Sine.InOut",
-      });
-    }
-
-    if (this.textures.exists("bg_long_ruins_parallax_alt")) {
-      const lowerStrip = this.add.image(GAME_WIDTH / 2, GAME_HEIGHT - 118, "bg_long_ruins_parallax_alt");
-      lowerStrip.setDisplaySize(GAME_WIDTH + 80, 224).setAlpha(0.26);
-      this.tweens.add({
-        targets: lowerStrip,
-        x: GAME_WIDTH / 2 - 20,
-        duration: 17500,
-        yoyo: true,
-        repeat: -1,
-        ease: "Sine.InOut",
-      });
     }
   }
 
@@ -155,6 +118,7 @@ export class GameScene extends Phaser.Scene {
   renderBoard() {
     this.tileObjects = [];
     this.patrolObjects = [];
+    this.probabilityOverlayObjects = [];
     this.keyPickups = new Map();
     this.walkableTiles = [];
     this.specialTileTweens = [];
@@ -165,15 +129,16 @@ export class GameScene extends Phaser.Scene {
       for (let x = 0; x < this.level.width; x += 1) {
         const cell = getCell(this.level, x, y);
         const world = this.tileToWorld({ x, y });
-        const tileObject = this.createImageOrFallback(this.getTileTexture(cell, x, y), world.x, world.y, {
+        const tileVisual = this.getTileVisual(cell, x, y);
+        const tileObject = this.createImageOrFallback(tileVisual.textureKey, world.x, world.y, {
           depth: 5,
+          rotation: tileVisual.rotation ?? 0,
           fillColor: cell.tile === "wall" ? 0x3d3842 : 0x7a736d,
         });
         this.tileObjects[y][x] = tileObject;
 
         if (cell.tile !== "wall") {
           this.walkableTiles.push({ x, y });
-          this.renderProbabilityOverlay(cell.profile, world.x, world.y);
           tileObject.setInteractive({ useHandCursor: true });
           tileObject.on("pointerover", () => this.setHoveredTile({ x, y }));
           tileObject.on("pointerout", () => this.clearHoveredTile());
@@ -205,27 +170,29 @@ export class GameScene extends Phaser.Scene {
   renderProbabilityOverlay(profile, x, y) {
     const alphaForProbability = (value) => Phaser.Math.Clamp(0.03 + value * 0.58, 0, 0.66);
     const depth = 8;
-    this.createImageOrFallback("overlay_compass_base", x, y, { depth, alpha: 0.14 });
-    this.createImageOrFallback("overlay_compass_intended_strong", x, y, {
+    const overlays = [];
+    overlays.push(this.createImageOrFallback("overlay_compass_base", x, y, { depth, alpha: 0.14 }));
+    overlays.push(this.createImageOrFallback("overlay_compass_intended_strong", x, y, {
       depth: depth + 0.1,
       alpha: alphaForProbability(profile.intended),
-    });
-    this.createImageOrFallback("overlay_compass_opposite_strong", x, y, {
+    }));
+    overlays.push(this.createImageOrFallback("overlay_compass_opposite_strong", x, y, {
       depth: depth + 0.1,
       alpha: alphaForProbability(profile.opposite),
-    });
-    this.createImageOrFallback("overlay_compass_left_strong", x, y, {
+    }));
+    overlays.push(this.createImageOrFallback("overlay_compass_left_strong", x, y, {
       depth: depth + 0.1,
       alpha: alphaForProbability(profile.left),
-    });
-    this.createImageOrFallback("overlay_compass_right_strong", x, y, {
+    }));
+    overlays.push(this.createImageOrFallback("overlay_compass_right_strong", x, y, {
       depth: depth + 0.1,
       alpha: alphaForProbability(profile.right),
-    });
-    this.createImageOrFallback("overlay_compass_stay_strong", x, y, {
+    }));
+    overlays.push(this.createImageOrFallback("overlay_compass_stay_strong", x, y, {
       depth: depth + 0.1,
       alpha: alphaForProbability(profile.stay),
-    });
+    }));
+    return overlays;
   }
 
   renderKeyPickup(position, world) {
@@ -299,7 +266,9 @@ export class GameScene extends Phaser.Scene {
       this.patrolObjects.push(
         this.createImageOrFallback("overlay_patrol_node", world.x, world.y, {
           depth: 11,
-          alpha: 0.34,
+          width: 34,
+          height: 34,
+          alpha: 0.72,
           fillColor: 0x8ae3d5,
         }),
       );
@@ -318,7 +287,9 @@ export class GameScene extends Phaser.Scene {
       this.patrolObjects.push(
         this.createImageOrFallback("overlay_patrol_path", midpoint.x, midpoint.y, {
           depth: 10,
-          alpha: 0.18,
+          width: 40,
+          height: 18,
+          alpha: 0.62,
           rotation: deltaY !== 0 ? Math.PI / 2 : 0,
           fillColor: 0x8ae3d5,
         }),
@@ -358,7 +329,6 @@ export class GameScene extends Phaser.Scene {
       boardRect: this.boardRect,
       onRestart: () => this.restartLevel(),
       onMenu: () => this.returnToMenu(),
-      onPause: () => this.togglePause(),
       onToggleSound: () => this.toggleSound(),
       onToggleMusic: () => this.toggleMusic(),
     });
@@ -387,11 +357,6 @@ export class GameScene extends Phaser.Scene {
 
       if (event.code === "KeyR") {
         this.restartLevel();
-        return;
-      }
-
-      if (event.code === "Escape") {
-        this.togglePause();
       }
     });
   }
@@ -409,12 +374,6 @@ export class GameScene extends Phaser.Scene {
       delay: 540,
       loop: true,
       callback: () => this.spawnAmbientMote(),
-    });
-
-    this.runePulseEvent = this.time.addEvent({
-      delay: 1500,
-      loop: true,
-      callback: () => this.spawnAmbientRunePulse(),
     });
 
     this.tileSparkEvent = this.time.addEvent({
@@ -449,26 +408,6 @@ export class GameScene extends Phaser.Scene {
     });
   }
 
-  spawnAmbientRunePulse() {
-    if (!this.walkableTiles.length || Phaser.Math.Between(0, 100) < 34) {
-      return;
-    }
-
-    const tile = Phaser.Utils.Array.GetRandom(
-      this.walkableTiles.filter(({ x, y }) => {
-        const cell = getCell(this.level, x, y);
-        return cell && cell.tile !== "trap" && cell.tile !== "lava";
-      }),
-    );
-
-    if (!tile) {
-      return;
-    }
-
-    const world = this.tileToWorld(tile);
-    this.spawnEffect("vfx-tile-rune-pulse", world.x, world.y, { alpha: 0.26, scale: 0.94, depth: 9 });
-  }
-
   spawnTileSpark() {
     const candidates = this.walkableTiles.filter(({ x, y }) => {
       const tile = getCell(this.level, x, y)?.tile;
@@ -494,32 +433,64 @@ export class GameScene extends Phaser.Scene {
     };
   }
 
-  getTileTexture(cell, x, y) {
+  getTileVisual(cell, x, y) {
     switch (cell.tile) {
       case "wall":
-        return this.getWallTexture(x, y);
+        return this.getWallVisual(x, y);
       case "start":
-        return "tile_start";
+        return { textureKey: "tile_start" };
       case "goal":
-        return "tile_goal";
+        return { textureKey: "tile_goal" };
       case "trap":
-        return "tile_trap";
+        return { textureKey: "tile_trap" };
       case "lava":
-        return "tile_lava";
+        return { textureKey: "tile_lava" };
       case "key":
-        return this.getFloorTexture(cell.probabilityKey);
+        return { textureKey: this.getFloorTexture(cell.probabilityKey) };
       default:
-        return this.getFloorTexture(cell.probabilityKey);
+        return { textureKey: this.getFloorTexture(cell.probabilityKey) };
     }
   }
 
-  getWallTexture(x, y) {
+  getWallVisual(x, y) {
+    const upWall = isWall(this.level, x, y - 1);
     const rightWall = isWall(this.level, x + 1, y);
     const downWall = isWall(this.level, x, y + 1);
-    if (rightWall && downWall) {
-      return "tile_wall_corner";
+    const leftWall = isWall(this.level, x - 1, y);
+
+    const exactCorner =
+      (upWall && rightWall && !downWall && !leftWall) ||
+      (rightWall && downWall && !upWall && !leftWall) ||
+      (downWall && leftWall && !upWall && !rightWall) ||
+      (leftWall && upWall && !rightWall && !downWall);
+
+    if (exactCorner) {
+      let rotation = 0;
+      if (rightWall && downWall) {
+        rotation = Math.PI / 2;
+      } else if (downWall && leftWall) {
+        rotation = Math.PI;
+      } else if (leftWall && upWall) {
+        rotation = -Math.PI / 2;
+      }
+
+      return {
+        textureKey: "tile_wall_corner",
+        rotation,
+      };
     }
-    return (x + y) % 2 === 0 ? "tile_wall_a" : "tile_wall_b";
+
+    if ((leftWall || rightWall) && !upWall && !downWall) {
+      return { textureKey: "tile_wall_a" };
+    }
+
+    if ((upWall || downWall) && !leftWall && !rightWall) {
+      return { textureKey: "tile_wall_b" };
+    }
+
+    return {
+      textureKey: (x + y) % 2 === 0 ? "tile_wall_a" : "tile_wall_b",
+    };
   }
 
   getFloorTexture(probabilityKey) {
@@ -551,6 +522,33 @@ export class GameScene extends Phaser.Scene {
     this.activeTileHighlight.setPosition(world.x, world.y);
   }
 
+  clearProbabilityOverlays() {
+    this.probabilityOverlayObjects.forEach((overlay) => overlay.destroy());
+    this.probabilityOverlayObjects = [];
+  }
+
+  updateAdjacentProbabilityOverlays() {
+    this.clearProbabilityOverlays();
+
+    const neighbors = [
+      { x: this.player.gridPosition.x, y: this.player.gridPosition.y - 1 },
+      { x: this.player.gridPosition.x + 1, y: this.player.gridPosition.y },
+      { x: this.player.gridPosition.x, y: this.player.gridPosition.y + 1 },
+      { x: this.player.gridPosition.x - 1, y: this.player.gridPosition.y },
+    ];
+
+    neighbors.forEach((position) => {
+      const cell = getCell(this.level, position.x, position.y);
+      if (!cell || cell.tile !== "floor") {
+        return;
+      }
+
+      const world = this.tileToWorld(position);
+      const profile = getProbabilityProfile(this.level, position.x, position.y);
+      this.probabilityOverlayObjects.push(...this.renderProbabilityOverlay(profile, world.x, world.y));
+    });
+  }
+
   setHoveredTile(position) {
     this.hoveredTile = { ...position };
     const world = this.tileToWorld(position);
@@ -575,6 +573,7 @@ export class GameScene extends Phaser.Scene {
     this.hud.setObjective({ requiresKey: this.level.requiresKey, hasKey: this.hasKey });
     this.hud.updateSettings(SaveManager.getState().settings);
     this.updateActiveTileHighlight();
+    this.updateAdjacentProbabilityOverlays();
   }
 
   playLevelMusic() {
@@ -686,7 +685,7 @@ export class GameScene extends Phaser.Scene {
     const cell = getCell(this.level, x, y);
 
     if (this.enemies.some((enemy) => this.positionsEqual(enemy.gridPosition, this.player.gridPosition))) {
-      await this.handleDefeat("The cursed knight caught the scholar.");
+      await this.handleDefeat();
       return true;
     }
 
@@ -697,7 +696,7 @@ export class GameScene extends Phaser.Scene {
       const world = this.tileToWorld({ x, y });
       this.spawnEffect(effectKey, world.x, world.y);
       AudioController.playSfx(this, soundKey);
-      await this.handleDefeat(tile === "lava" ? "Lava consumed the scholar." : "A rune trap claimed the scholar.");
+      await this.handleDefeat();
       return true;
     }
 
@@ -748,7 +747,7 @@ export class GameScene extends Phaser.Scene {
       }
 
       if (this.positionsEqual(enemy.gridPosition, this.player.gridPosition)) {
-        await this.handleDefeat("The cursed knight caught the scholar.");
+        await this.handleDefeat();
         return true;
       }
     }
@@ -817,13 +816,13 @@ export class GameScene extends Phaser.Scene {
     this.overlayKind = "victory";
   }
 
-  async handleDefeat(reason) {
+  async handleDefeat() {
     this.isFinished = true;
     AudioController.playSfx(this, "defeat_sting");
     await this.player.playDeath();
     this.hud.showOverlay({
       title: "Defeat",
-      body: reason,
+      body: "",
       panelTexture: "panel_defeat",
       buttons: [
         {
@@ -843,47 +842,6 @@ export class GameScene extends Phaser.Scene {
       ],
     });
     this.overlayKind = "defeat";
-  }
-
-  togglePause() {
-    if (this.isFinished || this.isBusy) {
-      return;
-    }
-
-    if (this.hud.isOverlayVisible && this.overlayKind === "pause") {
-      this.hud.hideOverlay();
-      this.overlayKind = null;
-      this.isPaused = false;
-      return;
-    }
-
-    if (this.hud.isOverlayVisible) {
-      return;
-    }
-
-    this.isPaused = true;
-    this.overlayKind = "pause";
-    this.hud.showOverlay({
-      title: "Paused",
-      body: this.level.name,
-      panelTexture: "panel_pause_menu",
-      buttons: [
-        {
-          label: "Resume",
-          onClick: () => this.togglePause(),
-        },
-        {
-          label: "Restart",
-          variant: "secondary",
-          onClick: () => this.restartLevel(),
-        },
-        {
-          label: "Menu",
-          variant: "secondary",
-          onClick: () => this.returnToMenu(),
-        },
-      ],
-    });
   }
 
   restartLevel() {
