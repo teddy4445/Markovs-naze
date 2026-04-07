@@ -19,6 +19,14 @@ export class Enemy {
     this.playIdle();
   }
 
+  setInteractive(onTap) {
+    this.sprite.setInteractive({ useHandCursor: true });
+    this.sprite.on("pointerdown", (_pointer, _localX, _localY, event) => {
+      event?.stopPropagation?.();
+      onTap?.();
+    });
+  }
+
   destroy() {
     this.sprite.destroy();
     this.alertIcon.destroy();

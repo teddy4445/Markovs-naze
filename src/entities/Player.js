@@ -16,6 +16,14 @@ export class Player {
     this.playIdle();
   }
 
+  setInteractive(onTap) {
+    this.sprite.setInteractive({ useHandCursor: true });
+    this.sprite.on("pointerdown", (_pointer, _localX, _localY, event) => {
+      event?.stopPropagation?.();
+      onTap?.();
+    });
+  }
+
   setGridPosition(position) {
     this.gridPosition = { ...position };
     const world = this.toWorldPosition(position);

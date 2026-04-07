@@ -142,6 +142,7 @@ export class GameScene extends Phaser.Scene {
           tileObject.setInteractive({ useHandCursor: true });
           tileObject.on("pointerover", () => this.setHoveredTile({ x, y }));
           tileObject.on("pointerout", () => this.clearHoveredTile());
+          tileObject.on("pointerdown", () => this.handleTilePress({ x, y }));
         }
 
         if (cell.tile === "key") {
@@ -302,6 +303,8 @@ export class GameScene extends Phaser.Scene {
     this.enemies = this.level.enemies.map(
       (enemy) => new Enemy(this, enemy, (position) => this.tileToWorld(position)),
     );
+    this.player.setInteractive(() => this.playCharacterTapSfx("player"));
+    this.enemies.forEach((enemy) => enemy.setInteractive(() => this.playCharacterTapSfx("enemy")));
 
     const playerWorld = this.tileToWorld(this.player.gridPosition);
     if (this.textures.exists("overlay_compass_active_tile")) {
@@ -322,6 +325,13 @@ export class GameScene extends Phaser.Scene {
       .setDepth(17)
       .setStrokeStyle(2, 0xe0be5c, 0.95)
       .setVisible(false);
+  }
+
+  playCharacterTapSfx(kind) {
+    const soundKey = kind === "enemy" ? "enemy_spotted_alert" : "player_step";
+    const channel = kind === "enemy" ? "enemy-tap" : "player-tap";
+    const volume = kind === "enemy" ? 0.42 : 0.5;
+    AudioController.playExclusiveSfx(this, channel, soundKey, { volume });
   }
 
   createHud() {
@@ -554,6 +564,32 @@ export class GameScene extends Phaser.Scene {
     const world = this.tileToWorld(position);
     this.hoverTileHighlight.setPosition(world.x, world.y).setVisible(true);
     this.refreshHud();
+  }
+
+  handleTilePress(position) {
+    if (this.isBusy || this.isFinished || this.hud.isOverlayVisible) {
+      return;
+    }
+
+    const deltaX = position.x - this.player.gridPosition.x;
+    const deltaY = position.y - this.player.gridPosition.y;
+    if (Math.abs(deltaX) + Math.abs(deltaY) !== 1) {
+      return;
+    }
+
+    if (!this.canPlayerOccupy(position.x, position.y)) {
+      return;
+    }
+
+    const direction =
+      deltaX === 1
+        ? "right"
+        : deltaX === -1
+          ? "left"
+          : deltaY === 1
+            ? "down"
+            : "up";
+    this.attemptPlayerMove(direction);
   }
 
   clearHoveredTile() {

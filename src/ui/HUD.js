@@ -77,10 +77,10 @@ export class HUD {
   }
 
   createProbabilityStrip(boardRect) {
-    const stripWidth = Math.min(Math.max(boardRect.width * 0.92, 520), 700);
-    const stripX = GAME_WIDTH / 2;
-    const stripY = Math.max(58, boardRect.y - 36);
-    const stripHeight = 84;
+    const stripWidth = 162;
+    const stripHeight = 344;
+    const stripX = GAME_WIDTH - 96;
+    const stripY = Math.max(214, boardRect.y + boardRect.height / 2);
 
     this.stripBackground = this.scene.add
       .rectangle(stripX, stripY, stripWidth, stripHeight, 0x120f18, 0.84)
@@ -95,67 +95,69 @@ export class HUD {
       { textureKey: "overlay_compass_stay_strong", label: "Stay" },
     ];
 
-    const startX = stripX - stripWidth / 2 + 52;
-    const spacing = (stripWidth - 104) / 4;
+    const rowStartY = stripY - stripHeight / 2 + 38;
+    const rowSpacing = 62;
     this.probabilityItems = items.map((item, index) => {
-      const itemX = startX + index * spacing;
+      const itemY = rowStartY + index * rowSpacing;
       const label = this.scene.add
-        .text(itemX, stripY - 24, item.label, {
+        .text(stripX, itemY - 16, item.label, {
           fontFamily: FONT_FAMILY,
           fontSize: "11px",
           fontStyle: "bold",
           color: "#ffffff",
         })
         .setOrigin(0.5);
-      const icon = createLegendIcon(this.scene, item.textureKey, itemX, stripY - 1);
+      const icon = createLegendIcon(this.scene, item.textureKey, stripX - 32, itemY + 12);
       const value = this.scene.add
-        .text(itemX, stripY + 24, "--", {
+        .text(stripX + 18, itemY + 12, "--", {
           fontFamily: FONT_FAMILY,
           fontSize: "14px",
           fontStyle: "bold",
           color: COLORS.panelText,
         })
-        .setOrigin(0.5);
+        .setOrigin(0, 0.5);
       this.root.add([label, icon, value]);
       return { value };
     });
   }
 
   createInfoPanel(boardRect) {
-    const panelWidth = Math.min(Math.max(boardRect.width + 150, 620), GAME_WIDTH - 180);
-    const panelX = GAME_WIDTH / 2;
-    const panelY = Math.min(GAME_HEIGHT - 44, boardRect.y + boardRect.height + 42);
+    const panelWidth = 260;
+    const panelHeight = 134;
+    const panelX = 154;
+    const panelY = GAME_HEIGHT - 92;
 
-    this.infoPanel = createPanel(this.scene, panelX, panelY, panelWidth, 78, 0.97);
+    this.infoPanel = createPanel(this.scene, panelX, panelY, panelWidth, panelHeight, 0.97);
     this.root.add(this.infoPanel);
 
     this.levelText = this.scene.add
-      .text(panelX - panelWidth / 2 + 20, panelY - 16, "", {
+      .text(panelX, panelY - 40, "", {
         fontFamily: FONT_FAMILY,
-        fontSize: "16px",
+        fontSize: "15px",
         fontStyle: "bold",
         color: COLORS.ink,
       })
-      .setOrigin(0, 0.5);
+      .setOrigin(0.5);
 
     this.objectiveText = this.scene.add
-      .text(panelX + panelWidth / 2 - 20, panelY - 16, "", {
+      .text(panelX, panelY - 14, "", {
         fontFamily: FONT_FAMILY,
-        fontSize: "14px",
-        fontStyle: "bold",
-        color: COLORS.ink,
-        align: "right",
-      })
-      .setOrigin(1, 0.5);
-
-    this.statusText = this.scene.add
-      .text(panelX, panelY + 16, "", {
-        fontFamily: FONT_FAMILY,
-        fontSize: "14px",
+        fontSize: "13px",
         fontStyle: "bold",
         color: COLORS.ink,
         align: "center",
-        wordWrap: { width: panelWidth - 48 },
+        wordWrap: { width: panelWidth - 30 },
+      })
+      .setOrigin(0.5);
+
+    this.statusText = this.scene.add
+      .text(panelX, panelY + 30, "", {
+        fontFamily: FONT_FAMILY,
+        fontSize: "13px",
+        fontStyle: "bold",
+        color: COLORS.ink,
+        align: "center",
+        wordWrap: { width: panelWidth - 30 },
       })
       .setOrigin(0.5, 0.5);
 

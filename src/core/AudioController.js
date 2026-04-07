@@ -39,4 +39,30 @@ export class AudioController {
 
     return scene.sound.play(key, { volume: 0.65, ...config });
   }
+
+  static playExclusiveSfx(scene, channel, key, config = {}) {
+    if (!SaveManager.isSoundEnabled() || !scene.cache.audio.exists(key)) {
+      return null;
+    }
+
+    scene.game.__markovsMazeExclusiveSfx ??= {};
+    const activeSound = scene.game.__markovsMazeExclusiveSfx[channel];
+    if (activeSound?.isPlaying) {
+      return activeSound;
+    }
+
+    activeSound?.stop();
+    activeSound?.destroy();
+
+    const sound = scene.sound.add(key, { volume: 0.65, ...config });
+    scene.game.__markovsMazeExclusiveSfx[channel] = sound;
+    sound.once("complete", () => {
+      if (scene.game.__markovsMazeExclusiveSfx[channel] === sound) {
+        scene.game.__markovsMazeExclusiveSfx[channel] = null;
+      }
+      sound.destroy();
+    });
+    sound.play();
+    return sound;
+  }
 }
